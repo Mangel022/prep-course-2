@@ -1,20 +1,44 @@
-function sumar(num){
-   if(num > 0 && num < 1){
-      return false;
-   }else if(num >= 0 || num <= -1){
-      return true;
+var numero = 'hola'
+
+
+function encuentrame(){
+   if(Object.entries(arguments).length === 0){
+      return 0;
    }else{
-      return false;
+      var multiplicar = 1;
+      for(let i = 0; i < arguments.length; i++){
+         multiplicar = multiplicar * arguments[i];
+      }
+      return multiplicar
    }
 }
 
 
-function hola(string1, string2){
-    return string1.length + ' - ' + string2.length;
+function recibopalabras(string){
+   var letra = string.split('');
+
+   var encontrado = letra.includes('p');
+
+   return encontrado
 }
 
-var numero = 123
-console.log(numero.toString().length)
+/* console.log(recibopalabras('hola'))
 
-var numero1 = 20
-console.log(numero1.length)
+console.log(encuentrame());
+console.log(encuentrame(5,5));
+console.log(encuentrame(3, 3, 3, 3)); */
+
+
+/* function argumentos(){
+   var multiplica = 1;
+   console.log(arguments.length); //length longitud
+   for(let i = 0; i < arguments.length; i++){
+      console.log(arguments[i])
+      multiplica = multiplica * arguments[i]
+   }
+   return multiplica
+}
+
+console.log(argumentos(1,2,3,4)); //-> llamada */
+
+
