@@ -41,4 +41,73 @@ console.log(encuentrame(3, 3, 3, 3)); */
 
 console.log(argumentos(1,2,3,4)); //-> llamada */
 
+var usiarios =
+   [
+      { esPremium: false },
+      { esPremium: false },
+      { esPremium: false },
+      { esPremium: false },
+      { esPremium: false },
+   ]
 
+function premium(objeto){
+   for(let i = 0; i < objeto.length; i++){
+      console.log(objeto[i].esPremium = true)
+   }
+}
+
+//premium(usiarios);
+
+
+
+var usuer = {
+   usernombre: 'Jhon Doe',
+   password: 'JavaScript es genial!',
+   posts: [
+      {
+         id: '1',
+         title: 'Aventuras en JS!',
+         likes: 10,
+      },
+      {
+         id: '2',
+         title: 'Soy Henry!',
+         likes: 100,
+      },
+      {
+         id: '3',
+         title: 'Qué es un JavaScript?',
+         likes: 35,
+      },
+      {
+         id: '4',
+         title: 'JS Objects for Dummies',
+         likes: 42,
+      },
+      {
+         id: '5',
+         title: 'Educación online',
+         likes: 99,
+      },
+   ],
+};
+
+var sumar = 0;
+for(let i = 0; i < usuer.posts.length; i++){
+   sumar += usuer.posts[i].likes;
+   //console.log(usuer.posts[i].likes);
+}
+
+//console.log("total de la suma. ",sumar)
+
+var storeItem = {
+   precio: 80,
+   porcentajeDeDescuento: 0.1,
+};
+
+storeItem.calcularPrecio = storeItem.precio * storeItem.porcentajeDeDescuento
+storeItem.calcularPrecio = storeItem.precio - storeItem.calcularPrecio
+console.log(storeItem)
+for (const key in storeItem) {
+   console.log(storeItem)
+}
