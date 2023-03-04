@@ -92,6 +92,10 @@ var usuer = {
    ],
 };
 
+usuer.posts.forEach(element => {
+   console.log(element);
+});
+
 var sumar = 0;
 for(let i = 0; i < usuer.posts.length; i++){
    sumar += usuer.posts[i].likes;
@@ -105,9 +109,8 @@ var storeItem = {
    porcentajeDeDescuento: 0.1,
 };
 
-storeItem.calcularPrecio = storeItem.precio * storeItem.porcentajeDeDescuento
-storeItem.calcularPrecio = storeItem.precio - storeItem.calcularPrecio
-console.log(storeItem)
-for (const key in storeItem) {
-   console.log(storeItem)
+storeItem.porcentajeTotal = function(){
+   return storeItem.precio * storeItem.porcentajeDeDescuento
 }
+
+console.log(storeItem)
